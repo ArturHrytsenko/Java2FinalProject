@@ -1,26 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package draftoffinalassignment;
 
-import java.text.SimpleDateFormat;
+import java.util.Comparator;
 
-/**
- *
- * @author shann
- */
-public class Expenses {
+public class Expenses extends Transaction{
    private double totalExpenses;
    private double addedExpenses; 
    //delete should be a method 
 
    public Expenses(double totalExpenses, double addedExpenses, String expenseCategory, String timeOfPurchase) {
+      super(addedExpenses, timeOfPurchase);
       this.totalExpenses = totalExpenses;
-      this.addedExpenses = addedExpenses;
       this.expenseCategory = expenseCategory;
-      this.timeOfPurchase = timeOfPurchase;
    }
    
    private String expenseCategory; 
@@ -50,12 +40,12 @@ public class Expenses {
       this.expenseCategory = expenseCategory;
    }
 
-   public SimpleDateFormat getTimeOfPurchase() {
+   public String getTimeOfPurchase() {
       return timeOfPurchase;
    }
 
-   public void setTimeOfPurchase(SimpleDateFormat timeOfPurchase) {
+   public void setTimeOfPurchase(String timeOfPurchase) {
       this.timeOfPurchase = timeOfPurchase;
    }
-   
+  
 }
